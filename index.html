@@ -1,0 +1,653 @@
+<!DOCTYPE HTML>
+<html lang="sk">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="MobileOptimized" content="320" />
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="date=no">
+	<meta name="format-detection" content="address=no">
+	<meta name="format-detection" content="email=no">
+	
+	<title>ŠetriSova</title>
+	
+	<script src="js/jquery.js"></script>
+	<script src="jquery-ui/jquery-ui.min.js"></script>
+	<script src="jquery-ui/jquery-ui-touch-punch.min.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/fontawesome.css" />
+	<link rel="stylesheet" type="text/css" href="jquery-ui/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	
+</head>
+<body class="clearfix">
+
+	<div class="header__porovnanie">
+		<div class="header__porovnanie__wrap">
+			<div class="header__porovnanie__inner clearfix">
+				<a href="#" class="header__porovnanie__inner__logo">
+					<img src="images/logo.svg" class="header__porovnanie__inner__logo--img" alt="ŠetriSova" width="172" height="27">
+				</a>
+				<h1 class="header__porovnanie__inner--heading">Porovnanie paušálov</h1>
+				<p class="header__porovnanie__inner--claim">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div>
+		</div>
+	</div>
+	
+	<div class="sidebar-comparison">
+		<div class="sidebar-comparison__wrap">
+			<div class="sidebar-comparison__inner">
+				<div class="sidebar-comparison__left">
+					<form class="sidebar-form">
+						<h2 class="sidebar-form__heading">Nájdite si najvýhodnejší paušál pre vás</h2>
+						<div class="sidebar-form__group">
+							<label class="sidebar-form__label">
+								<span class="sidebar-form__label__text">Dáta (GB)</span>
+								<span class="sidebar-form__label__input__container">
+									<input type="text" placeholder="10" class="sidebar-form__label__input" />
+									<span class="sidebar-form__label__input__unit">GB/mes</span>
+								</span>
+							</label>
+							<div class="sidebar-form__filter sidebar-form__filter--slider">
+								<span class="sidebar-form__filter__text">0 GB</span>
+								<div class="sidebar-form__filter__slider" id="data-filter"></div>
+								<span class="sidebar-form__filter__text">Neobm.</span>
+							</div>
+							<div class="sidebar-form__notsure">
+								<a href="#" class="sidebar-form__calculator__trigger">Nie ste si istý? <span class="sidebar-form__calculator__trigger__icon"><i class="fas fa-angle-down"></i></span></a>
+								<div class="sidebar-form__calculator">
+									<span class="sidebar-form__calculator__heading">Vyberte všetky možnosti, ktoré používate viac ako hodinu denne, <strong>keď nie ste pripojený na WI-FI</strong>.</span>
+									<label class="sidebar-form__calculator__item">
+										<input type="checkbox" class="sidebar-form__calculator__item__checkbox" />
+										<span class="sidebar-form__calculator__item__text">
+											Web a maily
+											<img src="images/calculator-icons/outlook.svg" alt="Outlook" align="right" width="16" height="16" class="sidebar-form__calculator__item__icon" />
+											<img src="images/calculator-icons/gmail.svg" alt="Gmail" align="right" width="16" height="16" class="sidebar-form__calculator__item__icon" />
+											<img src="images/calculator-icons/chrome.svg" alt="Google Chrome" align="right" width="16" height="16" class="sidebar-form__calculator__item__icon" />
+											<img src="images/calculator-icons/firefox.svg" alt="Firefox" align="right" width="16" height="16" class="sidebar-form__calculator__item__icon" />
+										</span>
+										<span class="sidebar-form__calculator__item__checkmark"></span>
+									</label>
+									<label class="sidebar-form__calculator__item">
+										<input type="checkbox" class="sidebar-form__calculator__item__checkbox" />
+										<span class="sidebar-form__calculator__item__text">
+											Sociálne siete
+											<img src="images/calculator-icons/facebook.svg" alt="Facebook" align="right" width="16" height="16" class="sidebar-form__calculator__item__icon" />
+											<img src="images/calculator-icons/twitter.svg" alt="Twitter" align="right" width="16" height="16" class="sidebar-form__calculator__item__icon" />
+											<img src="images/calculator-icons/instagram.svg" alt="Instagram" align="right" width="16" height="16" class="sidebar-form__calculator__item__icon" />
+											<img src="images/calculator-icons/whatsapp.svg" alt="WhatsApp" align="right" width="16" height="16" class="sidebar-form__calculator__item__icon" />											
+										</span>
+										<span class="sidebar-form__calculator__item__checkmark"></span>
+									</label>
+									<label class="sidebar-form__calculator__item">
+										<input type="checkbox" class="sidebar-form__calculator__item__checkbox" />
+										<span class="sidebar-form__calculator__item__text">
+											Hudba
+											<img src="images/calculator-icons/spotify.svg" alt="Spotify" align="right" width="16" height="16" class="sidebar-form__calculator__item__icon" />
+											<img src="images/calculator-icons/shazam.svg" alt="Shazam" align="right" width="16" height="16" class="sidebar-form__calculator__item__icon" />
+											<img src="images/calculator-icons/soundcloud.svg" alt="SoundCloud" align="right" width="16" height="16" class="sidebar-form__calculator__item__icon" />
+											<img src="images/calculator-icons/apple-music.svg" alt="Apple Music" align="right" width="16" height="16" class="sidebar-form__calculator__item__icon" />
+										</span>
+										<span class="sidebar-form__calculator__item__checkmark"></span>
+									</label>
+									<label class="sidebar-form__calculator__item">
+										<input type="checkbox" class="sidebar-form__calculator__item__checkbox" />
+										<span class="sidebar-form__calculator__item__text">
+											Video
+											<img src="images/calculator-icons/youtube.svg" alt="YouTube" align="right" width="16" height="16" class="sidebar-form__calculator__item__icon" />
+											<img src="images/calculator-icons/vimeo.svg" alt="Vimeo" align="right" width="16" height="16" class="sidebar-form__calculator__item__icon" />
+											<img src="images/calculator-icons/tiktok.svg" alt="TikTok" align="right" width="16" height="16" class="sidebar-form__calculator__item__icon" />
+											<img src="images/calculator-icons/netflix.svg" alt="Netflix" align="right" width="16" height="16" class="sidebar-form__calculator__item__icon" />
+										</span>
+										<span class="sidebar-form__calculator__item__checkmark"></span>
+									</label>
+									<label class="sidebar-form__calculator__item">
+										<input type="checkbox" class="sidebar-form__calculator__item__checkbox" />
+										<span class="sidebar-form__calculator__item__text">
+											Navigácia
+											<img src="images/calculator-icons/google-maps.svg" alt="Google Maps" align="right" width="16" height="16" class="sidebar-form__calculator__item__icon" />
+											<img src="images/calculator-icons/waze.svg" alt="Waze" align="right" width="16" height="16" class="sidebar-form__calculator__item__icon" />
+											<img src="images/calculator-icons/apple-maps.svg" alt="Apple Maps" align="right" width="16" height="16" class="sidebar-form__calculator__item__icon" />
+											<img src="images/calculator-icons/maps-me.svg" alt="Maps.me" align="right" width="16" height="16" class="sidebar-form__calculator__item__icon" />
+										</span>
+										<span class="sidebar-form__calculator__item__checkmark"></span>
+									</label>
+									<label class="sidebar-form__calculator__item">
+										<input type="checkbox" class="sidebar-form__calculator__item__checkbox" />
+										<span class="sidebar-form__calculator__item__text">
+											Hry
+											<img src="images/calculator-icons/games.svg" alt="Hry" align="right" width="16" height="16" class="sidebar-form__calculator__item__icon" />
+										</span>
+										<span class="sidebar-form__calculator__item__checkmark"></span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="sidebar-form__group">
+							<label class="sidebar-form__label">
+								<span class="sidebar-form__label__text">Hovory</span>
+								<span class="sidebar-form__label__input__container">
+									<input type="text" placeholder="100" class="sidebar-form__label__input" />
+									<span class="sidebar-form__label__input__unit">min/mes</span>
+								</span>
+							</label>
+							<div class="sidebar-form__filter sidebar-form__filter--slider">
+								<span class="sidebar-form__filter__text">0 min</span>
+								<div class="sidebar-form__filter__slider" id="cell-filter"></div>
+								<span class="sidebar-form__filter__text">Neobm.</span>
+							</div>
+						</div>
+						<div class="sidebar-form__group">
+							<label class="sidebar-form__label">
+								<span class="sidebar-form__label__text">SMS</span>
+								<span class="sidebar-form__label__input__container">
+									<input type="text" placeholder="100" class="sidebar-form__label__input" />
+									<span class="sidebar-form__label__input__unit">SMS/mes</span>
+								</span>
+							</label>
+							<div class="sidebar-form__filter sidebar-form__filter--slider">
+								<span class="sidebar-form__filter__text">0 SMS</span>
+								<div class="sidebar-form__filter__slider" id="sms-filter"></div>
+								<span class="sidebar-form__filter__text">Neobm.</span>
+							</div>
+						</div>
+						<div class="sidebar-form__group">
+							<label class="sidebar-form__label">
+								<span class="sidebar-form__label__text">Cena paušálu</span>
+							</label>
+							<div class="sidebar-form__filter">
+								<label class="sidebar-form__filter__choice">
+									<input type="radio" name="price" class="sidebar-form__filter__choice__radio" checked="checked" />
+									<span class="sidebar-form__filter__choice__text">0-20 €<em>mesačne</em></span>
+									<span class="sidebar-form__filter__choice__checkmark"></span>
+								</label>
+								<label class="sidebar-form__filter__choice">
+									<input type="radio" name="price" class="sidebar-form__filter__choice__radio" />
+									<span class="sidebar-form__filter__choice__text">21-40 €<em>mesačne</em></span>
+									<span class="sidebar-form__filter__choice__checkmark"></span>
+								</label>
+								<label class="sidebar-form__filter__choice">
+									<input type="radio" name="price" class="sidebar-form__filter__choice__radio" />
+									<span class="sidebar-form__filter__choice__text">41-60 €<em>mesačne</em></span>
+									<span class="sidebar-form__filter__choice__checkmark"></span>
+								</label>
+								<label class="sidebar-form__filter__choice">
+									<input type="radio" name="price" class="sidebar-form__filter__choice__radio" />
+									<span class="sidebar-form__filter__choice__text">61+ €<em>mesačne</em></span>
+									<span class="sidebar-form__filter__choice__checkmark"></span>
+								</label>
+							</div>
+						</div>
+						<div class="sidebar-form__group">
+							<button class="sidebar-form__group__submit transition">Zobraziť porovnanie<i class="fas fa-angle-right"></i></button>
+						</div>
+					</form>
+				</div>
+				<div class="sidebar-comparison__right">
+					<div class="sidebar-result">
+						<div class="sidebar-result__info">
+							<div class="sidebar-result__inclusions">
+								<div class="sidebar-result__branding">
+									<img src="images/o2.svg" alt="O2" class="sidebar-result__branding__logo" />
+									<span class="sidebar-result__branding__description">Modré O2 dáta</span>
+								</div>
+								<div class="sidebar-result__services">
+									<div class="sidebar-result__services__item">
+										<span class="sidebar-result__services__item__amount">5 GB</span>
+										<span class="sidebar-result__services__item__description">dát</span>
+										<a href="#" class="sidebar-result__services__item__unitprice sidebar-result__packets__trigger">Dátové balíky</a>
+									</div>
+									<div class="sidebar-result__services__item">
+										<span class="sidebar-result__services__item__amount">0</span>
+										<span class="sidebar-result__services__item__description">minút</span>
+										<span class="sidebar-result__services__item__unitprice">0,10 €/min</span>
+									</div>
+									<div class="sidebar-result__services__item">
+										<span class="sidebar-result__services__item__amount">0</span>
+										<span class="sidebar-result__services__item__description">SMS</span>
+										<span class="sidebar-result__services__item__unitprice">0,06 €/SMS</span>
+									</div>
+								</div>
+								<div class="sidebar-result__price">
+									<span class="sidebar-result__price__amount">15 €</span>
+									<span class="sidebar-result__price__period">mesačne</span>
+								</div>
+							</div>
+							<div class="sidebar-result__packets">
+								<span class="sidebar-result__packets__heading">Balíky, ktoré si môžete k tomuto programu zakúpiť:</span>
+								<div class="sidebar-result__packets__container">
+									<div class="sidebar-result__packets__item">
+										<span class="sidebar-result__packets__item__heading">Denné dáta neobmedzené</span>
+										<table class="sidebar-result__packets__item__info">
+											<tr>
+												<td>Cena</td>
+												<td>3 €</td>
+											</tr>
+											<tr>
+												<td>Obdobie</td>
+												<td>1 deň</td>
+											</tr>
+										</table>
+										<span class="sidebar-result__packets__item__description">Neobmedzený objem dát platný 24 hodín od zakúpenia.</span>
+									</div>
+									<div class="sidebar-result__packets__item">
+										<span class="sidebar-result__packets__item__heading">Denné dáta 1 GB</span>
+										<table class="sidebar-result__packets__item__info">
+											<tr>
+												<td>Cena</td>
+												<td>1,50 €</td>
+											</tr>
+											<tr>
+												<td>Obdobie</td>
+												<td>1 deň</td>
+											</tr>
+										</table>
+										<span class="sidebar-result__packets__item__description">1 GB dát navyše platný 24 hodín od aktivácie.</span>
+									</div>
+									<div class="sidebar-result__packets__item">
+										<span class="sidebar-result__packets__item__heading">Nekonečno HD</span>
+										<table class="sidebar-result__packets__item__info">
+											<tr>
+												<td>Cena</td>
+												<td>Zadarmo</td>
+											</tr>
+											<tr>
+												<td>Obdobie</td>
+												<td>mesiac</td>
+											</tr>
+										</table>
+										<span class="sidebar-result__packets__item__description">Po vyčerpaní dát z paušálu dátujete s týmto programom ďalej pri rýchlosti 10 Mbps.</span>
+									</div>
+									<div class="sidebar-result__packets__item">
+										<span class="sidebar-result__packets__item__heading">Dáta 1 GB</span>
+										<table class="sidebar-result__packets__item__info">
+											<tr>
+												<td>Cena</td>
+												<td>3 €</td>
+											</tr>
+											<tr>
+												<td>Obdobie</td>
+												<td>do ďalšej fakturácie</td>
+											</tr>
+										</table>
+										<span class="sidebar-result__packets__item__description">1 GB dát navyše do konca vášho zúčtovacieho obdobia.</span>
+									</div>
+								</div>
+							</div>
+							<div class="sidebar-result__features">
+								<ul class="sidebar-result__features__list">
+									<li class="sidebar-result__features__list__item"><strong>Bonus na zariadenie 72 €</strong> (zníženie dát na 4 GB/mesiac)</li>
+									<li class="sidebar-result__features__list__item">Cena 15 € ak faktúry chodia elektronicky a sú uhrádzané elektrornicky, inak 17 €</li>
+								</ul>
+							</div>
+						</div>
+						<div class="sidebar-result__action">
+							<a href="#" class="sidebar-result__btn transition">
+								Pokračovať
+								<span class="sidebar-result__btn__icon">
+									<img src="images/btn--arrow.svg" alt="Ďalej" class="sidebar-result__btn__icon__img" />
+								</span>
+							</a>
+						</div>
+					</div>
+					<div class="sidebar-result">
+						<div class="sidebar-result__info">
+							<div class="sidebar-result__inclusions">
+								<div class="sidebar-result__branding">
+									<img src="images/tmobile.svg" alt="T-Mobile" class="sidebar-result__branding__logo" />
+									<span class="sidebar-result__branding__description">BEZ ZÁVÄZKOV</span>
+								</div>
+								<div class="sidebar-result__services">
+									<div class="sidebar-result__services__item">
+										<span class="sidebar-result__services__item__amount">0</span>
+										<span class="sidebar-result__services__item__description">dát</span>
+										<span class="sidebar-result__services__item__unitprice">0,10 €/MB</span>
+									</div>
+									<div class="sidebar-result__services__item">
+										<span class="sidebar-result__services__item__amount">0</span>
+										<span class="sidebar-result__services__item__description">minút</span>
+										<span class="sidebar-result__services__item__unitprice">0,12 €/min</span>
+									</div>
+									<div class="sidebar-result__services__item">
+										<span class="sidebar-result__services__item__amount">0</span>
+										<span class="sidebar-result__services__item__description">SMS</span>
+										<span class="sidebar-result__services__item__unitprice">0,06 €/SMS</span>
+									</div>
+								</div>
+								<div class="sidebar-result__price">
+									<span class="sidebar-result__price__period">Reálna spotreba</span>
+									<span class="sidebar-result__price__period--smaller">za volania, sms a dáta</span>
+								</div>
+							</div>
+							<div class="sidebar-result__features">
+								<ul class="sidebar-result__features__list">
+									<li class="sidebar-result__features__list__item">Možnosť dokúpiť Dáta 1 GB za 3 € platné do nasledujúceho zúčtovacieho obdobia</li>
+									<li class="sidebar-result__features__list__item">Bez viazanosti a mesačných poplatkov, platíte len za to, čo miniete</li>
+								</ul>
+							</div>
+						</div>
+						<div class="sidebar-result__action">
+							<a href="#" class="sidebar-result__btn transition">
+								Pokračovať
+								<span class="sidebar-result__btn__icon">
+									<img src="images/btn--arrow.svg" alt="Ďalej" class="sidebar-result__btn__icon__img" />
+								</span>
+							</a>
+						</div>
+					</div>
+					<div class="sidebar-result">
+						<div class="sidebar-result__info">
+							<div class="sidebar-result__inclusions">
+								<div class="sidebar-result__branding">
+									<img src="images/4ka.svg" alt="4ka" class="sidebar-result__branding__logo" />
+									<span class="sidebar-result__branding__description">SLOBODA</span>
+								</div>
+								<div class="sidebar-result__services">
+									<div class="sidebar-result__services__item">
+										<span class="sidebar-result__services__item__amount">Neobmedzené</span>
+										<span class="sidebar-result__services__item__description">dáta</span>
+										<span class="sidebar-result__services__item__unitprice">-</span>
+									</div>
+									<div class="sidebar-result__services__item">
+										<span class="sidebar-result__services__item__amount">Neobmedzené</span>
+										<span class="sidebar-result__services__item__description">minúty</span>
+										<span class="sidebar-result__services__item__unitprice">-</span>
+									</div>
+									<div class="sidebar-result__services__item">
+										<span class="sidebar-result__services__item__amount">Neobmedzené</span>
+										<span class="sidebar-result__services__item__description">SMS</span>
+										<span class="sidebar-result__services__item__unitprice">-</span>
+									</div>
+								</div>
+								<div class="sidebar-result__price">
+									<span class="sidebar-result__price__amount">20 €</span>
+									<span class="sidebar-result__price__period">mesačne</span>
+								</div>
+							</div>
+							<div class="sidebar-result__features">
+								<ul class="sidebar-result__features__list">
+									<li class="sidebar-result__features__list__item">3,38 GB z dostupných dát môžete minúť mimo SR v EÚ</li>
+									<li class="sidebar-result__features__list__item">Možnosť platiť nie len na faktúru, ale aj ako predplatenú službu</li>
+								</ul>
+							</div>
+						</div>
+						<div class="sidebar-result__action">
+							<a href="#" class="sidebar-result__btn transition">
+								Pokračovať
+								<span class="sidebar-result__btn__icon">
+									<img src="images/btn--arrow.svg" alt="Ďalej" class="sidebar-result__btn__icon__img" />
+								</span>
+							</a>
+						</div>
+					</div>
+					<div class="sidebar-result">
+						<div class="sidebar-result__info">
+							<div class="sidebar-result__inclusions">
+								<div class="sidebar-result__branding">
+									<img src="images/orange.svg" alt="Orange" class="sidebar-result__branding__logo" />
+									<span class="sidebar-result__branding__description">Go 15 €</span>
+								</div>
+								<div class="sidebar-result__services">
+									<div class="sidebar-result__services__item">
+										<span class="sidebar-result__services__item__amount">500 MB</span>
+										<span class="sidebar-result__services__item__description">dát</span>
+										<a href="#" class="sidebar-result__services__item__unitprice sidebar-result__packets__trigger">Dátové balíky</a>
+									</div>
+									<div class="sidebar-result__services__item">
+										<span class="sidebar-result__services__item__amount">200</span>
+										<span class="sidebar-result__services__item__description">minút</span>
+										<span class="sidebar-result__services__item__unitprice">-</span>
+									</div>
+									<div class="sidebar-result__services__item">
+										<span class="sidebar-result__services__item__amount">100</span>
+										<span class="sidebar-result__services__item__description">SMS</span>
+										<span class="sidebar-result__services__item__unitprice">-</span>
+									</div>
+								</div>
+								<div class="sidebar-result__price">
+									<span class="sidebar-result__price__amount">15 €</span>
+									<span class="sidebar-result__price__period">mesačne</span>
+								</div>
+							</div>
+							<div class="sidebar-result__packets">
+								<span class="sidebar-result__packets__heading">Balíky, ktoré si môžete k tomuto programu zakúpiť:</span>
+								<div class="sidebar-result__packets__container">
+									<div class="sidebar-result__packets__item">
+										<span class="sidebar-result__packets__item__heading">Denné dáta neobmedzené</span>
+										<table class="sidebar-result__packets__item__info">
+											<tr>
+												<td>Cena</td>
+												<td>3 €</td>
+											</tr>
+											<tr>
+												<td>Obdobie</td>
+												<td>1 deň</td>
+											</tr>
+										</table>
+										<span class="sidebar-result__packets__item__description">Neobmedzený objem dát platný 24 hodín od zakúpenia.</span>
+									</div>
+									<div class="sidebar-result__packets__item">
+										<span class="sidebar-result__packets__item__heading">Denné dáta 1 GB</span>
+										<table class="sidebar-result__packets__item__info">
+											<tr>
+												<td>Cena</td>
+												<td>1,50 €</td>
+											</tr>
+											<tr>
+												<td>Obdobie</td>
+												<td>1 deň</td>
+											</tr>
+										</table>
+										<span class="sidebar-result__packets__item__description">1 GB dát navyše platný 24 hodín od aktivácie.</span>
+									</div>
+									<div class="sidebar-result__packets__item">
+										<span class="sidebar-result__packets__item__heading">Nekonečno HD</span>
+										<table class="sidebar-result__packets__item__info">
+											<tr>
+												<td>Cena</td>
+												<td>Zadarmo</td>
+											</tr>
+											<tr>
+												<td>Obdobie</td>
+												<td>mesiac</td>
+											</tr>
+										</table>
+										<span class="sidebar-result__packets__item__description">Po vyčerpaní dát z paušálu dátujete s týmto programom ďalej pri rýchlosti 10 Mbps.</span>
+									</div>
+									<div class="sidebar-result__packets__item">
+										<span class="sidebar-result__packets__item__heading">Dáta 1 GB</span>
+										<table class="sidebar-result__packets__item__info">
+											<tr>
+												<td>Cena</td>
+												<td>3 €</td>
+											</tr>
+											<tr>
+												<td>Obdobie</td>
+												<td>do ďalšej fakturácie</td>
+											</tr>
+										</table>
+										<span class="sidebar-result__packets__item__description">1 GB dát navyše do konca vášho zúčtovacieho obdobia.</span>
+									</div>
+								</div>
+							</div>
+							<div class="sidebar-result__features">
+								<ul class="sidebar-result__features__list">
+									<li class="sidebar-result__features__list__item">Zľava 10 € z prvej faktúry pri online nákupe</li>
+								</ul>
+							</div>
+						</div>
+						<div class="sidebar-result__action">
+							<a href="#" class="sidebar-result__btn transition">
+								Pokračovať
+								<span class="sidebar-result__btn__icon">
+									<img src="images/btn--arrow.svg" alt="Ďalej" class="sidebar-result__btn__icon__img" />
+								</span>
+							</a>
+						</div>
+					</div>
+					<div class="sidebar-result">
+						<div class="sidebar-result__info">
+							<div class="sidebar-result__inclusions">
+								<div class="sidebar-result__branding">
+									<img src="images/radost.svg" alt="Radosť" class="sidebar-result__branding__logo" />
+									<span class="sidebar-result__branding__description">Veľká radosť</span>
+								</div>
+								<div class="sidebar-result__services">
+									<div class="sidebar-result__services__item">
+										<span class="sidebar-result__services__item__amount">8 GB</span>
+										<span class="sidebar-result__services__item__description">dát</span>
+										<span class="sidebar-result__services__item__unitprice">1 GB/2 €</span>
+									</div>
+									<div class="sidebar-result__services__item">
+										<span class="sidebar-result__services__item__amount">200</span>
+										<span class="sidebar-result__services__item__description">minút</span>
+										<span class="sidebar-result__services__item__unitprice">0,05 €/min</span>
+									</div>
+									<div class="sidebar-result__services__item">
+										<span class="sidebar-result__services__item__amount">200</span>
+										<span class="sidebar-result__services__item__description">SMS</span>
+										<span class="sidebar-result__services__item__unitprice">0,05 €/SMS</span>
+									</div>
+								</div>
+								<div class="sidebar-result__price">
+									<span class="sidebar-result__price__amount">10 €</span>
+									<span class="sidebar-result__price__period">mesačne</span>
+								</div>
+							</div>
+							<div class="sidebar-result__features">
+								<ul class="sidebar-result__features__list">
+									<li class="sidebar-result__features__list__item">8 GB dát, z toho v EÚ 5,5 GB, po prekročení limitu pre EÚ sa za dáta dopláca</li>
+									<li class="sidebar-result__features__list__item">Po vyčerpaní dát navýšenie dátového balíka o 1 GB za 2 €</li>
+									<li class="sidebar-result__features__list__item">Limit 200 platí súhrn prevolaných minút a odoslaných sms / MMS</li>
+								</ul>
+							</div>
+						</div>
+						<div class="sidebar-result__action">
+							<a href="#" class="sidebar-result__btn transition">
+								Pokračovať
+								<span class="sidebar-result__btn__icon">
+									<img src="images/btn--arrow.svg" alt="Ďalej" class="sidebar-result__btn__icon__img" />
+								</span>
+							</a>
+						</div>
+					</div>
+					<div class="sidebar-result">
+						<div class="sidebar-result__info">
+							<div class="sidebar-result__inclusions">
+								<div class="sidebar-result__branding">
+									<img src="images/o2.svg" alt="O2" class="sidebar-result__branding__logo" />
+									<span class="sidebar-result__branding__description">O2 Fér na faktúru + 1GB dát</span>
+								</div>
+								<div class="sidebar-result__services">
+									<div class="sidebar-result__services__item">
+										<span class="sidebar-result__services__item__amount">1 GB</span>
+										<span class="sidebar-result__services__item__description">dát</span>
+										<a href="#" class="sidebar-result__services__item__unitprice sidebar-result__packets__trigger">Dátové balíky</a>
+									</div>
+									<div class="sidebar-result__services__item">
+										<span class="sidebar-result__services__item__amount">0</span>
+										<span class="sidebar-result__services__item__description">minút</span>
+										<span class="sidebar-result__services__item__unitprice">0,13 €/min</span>
+									</div>
+									<div class="sidebar-result__services__item">
+										<span class="sidebar-result__services__item__amount">0</span>
+										<span class="sidebar-result__services__item__description">SMS</span>
+										<span class="sidebar-result__services__item__unitprice">0,06 €/SMS</span>
+									</div>
+								</div>
+								<div class="sidebar-result__price">
+									<span class="sidebar-result__price__amount">5 €</span>
+									<span class="sidebar-result__price__period">+ reálna spotreba</span>
+									<span class="sidebar-result__price__period--smaller">za volania, sms a dáta</span>
+								</div>
+							</div>
+							<div class="sidebar-result__packets">
+								<span class="sidebar-result__packets__heading">Balíky, ktoré si môžete k tomuto programu zakúpiť:</span>
+								<div class="sidebar-result__packets__container">
+									<div class="sidebar-result__packets__item">
+										<span class="sidebar-result__packets__item__heading">Denné dáta neobmedzené</span>
+										<table class="sidebar-result__packets__item__info">
+											<tr>
+												<td>Cena</td>
+												<td>3 €</td>
+											</tr>
+											<tr>
+												<td>Obdobie</td>
+												<td>1 deň</td>
+											</tr>
+										</table>
+										<span class="sidebar-result__packets__item__description">Neobmedzený objem dát platný 24 hodín od zakúpenia.</span>
+									</div>
+									<div class="sidebar-result__packets__item">
+										<span class="sidebar-result__packets__item__heading">Denné dáta 1 GB</span>
+										<table class="sidebar-result__packets__item__info">
+											<tr>
+												<td>Cena</td>
+												<td>1,50 €</td>
+											</tr>
+											<tr>
+												<td>Obdobie</td>
+												<td>1 deň</td>
+											</tr>
+										</table>
+										<span class="sidebar-result__packets__item__description">1 GB dát navyše platný 24 hodín od aktivácie.</span>
+									</div>
+									<div class="sidebar-result__packets__item">
+										<span class="sidebar-result__packets__item__heading">Nekonečno HD</span>
+										<table class="sidebar-result__packets__item__info">
+											<tr>
+												<td>Cena</td>
+												<td>Zadarmo</td>
+											</tr>
+											<tr>
+												<td>Obdobie</td>
+												<td>mesiac</td>
+											</tr>
+										</table>
+										<span class="sidebar-result__packets__item__description">Po vyčerpaní dát z paušálu dátujete s týmto programom ďalej pri rýchlosti 10 Mbps.</span>
+									</div>
+									<div class="sidebar-result__packets__item">
+										<span class="sidebar-result__packets__item__heading">Dáta 1 GB</span>
+										<table class="sidebar-result__packets__item__info">
+											<tr>
+												<td>Cena</td>
+												<td>3 €</td>
+											</tr>
+											<tr>
+												<td>Obdobie</td>
+												<td>do ďalšej fakturácie</td>
+											</tr>
+										</table>
+										<span class="sidebar-result__packets__item__description">1 GB dát navyše do konca vášho zúčtovacieho obdobia.</span>
+									</div>
+								</div>
+							</div>
+							<div class="sidebar-result__features">
+								<ul class="sidebar-result__features__list">
+									<li class="sidebar-result__features__list__item">Možnosť dokúpiť Dáta 1 GB za 3 € platné do nasledujúceho zúčtovacieho obdobia</li>
+									<li class="sidebar-result__features__list__item">Bez viazanosti a mesačných poplatkov, platíte len za to, čo miniete</li>
+								</ul>
+							</div>
+						</div>
+						<div class="sidebar-result__action">
+							<a href="#" class="sidebar-result__btn transition">
+								Pokračovať
+								<span class="sidebar-result__btn__icon">
+									<img src="images/btn--arrow.svg" alt="Ďalej" class="sidebar-result__btn__icon__img" />
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script src="js/script.js"></script>
+	
+	
+</body>
+</html>
