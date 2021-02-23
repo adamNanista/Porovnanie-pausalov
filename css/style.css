@@ -732,9 +732,9 @@ p em {
 .sidebar-result__branding__description {
 	display: block;
 	
-	font-size: 10px;
+	font-size: 12px;
 	font-weight: 500;
-	line-height: 12px;
+	line-height: 15px;
 }
 
 .sidebar-result__services {
@@ -756,6 +756,7 @@ p em {
 	flex-grow: 1;
 	-ms-flex-preferred-size: 0;
 	flex-basis: 0;
+	min-width: 0;
 	
 	text-align: center;
 }
@@ -764,9 +765,14 @@ p em {
 	display: block;
 }
 .sidebar-result__services__item__amount {
-	font-size: 16px;
+	overflow: hidden;
+	padding: 0 5px;
+	
+	font-size: 18px;
 	font-weight: 500;
-	line-height: 15px;
+	line-height: 18px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 .sidebar-result__services__item__description {
 	font-size: 12px;
@@ -778,16 +784,17 @@ p em {
 	margin-top: 10px;
 	vertical-align: top;
 	
-	font-size: 10px;
+	font-size: 12px;
 	font-weight: 700;
-	line-height: 20px;
+	line-height: 22px;
 }
 .sidebar-result__services__item__unitprice.sidebar-result__packets__trigger {
-	padding: 0 18px 0 5px;
+	padding: 0 20px 0 7px;
 	position: relative;
 	
 	color: #000000;
 	text-decoration: none;
+	white-space: nowrap;
 	
 	background: #caedec;
 	border-radius: 4px;
@@ -797,9 +804,10 @@ p em {
 	content: " ";
 	display: block;
 	height: 8px;
+	margin-top: -4px;
 	position: absolute;
-	right: 5px;
-	top: 6px;
+	right: 7px;
+	top: 50%;
 	width: 8px;
 	
 	background: url(../images/packet-dropdown.svg) no-repeat center;
@@ -863,9 +871,9 @@ p em {
 	display: block;
 	padding: 10px;
 	
-	font-size: 10px;
+	font-size: 12px;
 	font-weight: 500;
-	line-height: 12px;
+	line-height: 15px;
 	
 	border-top: 1px solid #e3f5f5;
 }
@@ -973,6 +981,12 @@ p em {
 	height: 16px;
 	margin: 9px auto 0;
 	width: 16px;
+}
+
+@media screen and (max-width: 359px) {
+	.sidebar-result {
+		padding: 15px 5px;
+	}
 }
 
 @media screen and (min-width: 1200px) {
