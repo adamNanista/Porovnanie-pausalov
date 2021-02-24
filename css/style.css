@@ -995,10 +995,10 @@ p em {
 	.sidebar-result__services__item__amount--unlimited:before {
 		content: "8";
 		display: inline-block;
-		-webkit-transform: rotate(90deg);
-		-moz-transform: rotate(90deg);
-		-o-transform: rotate(90deg);
-		transform: rotate(90deg);
+		-webkit-transform: rotate(-90deg);
+		-moz-transform: rotate(-90deg);
+		-o-transform: rotate(-90deg);
+		transform: rotate(-90deg);
 		
 		font-size: 23px;
 		line-height: 1;
