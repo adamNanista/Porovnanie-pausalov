@@ -765,14 +765,11 @@ p em {
 	display: block;
 }
 .sidebar-result__services__item__amount {
-	overflow: hidden;
 	padding: 0 5px;
 	
 	font-size: 18px;
 	font-weight: 500;
 	line-height: 18px;
-	text-overflow: ellipsis;
-	white-space: nowrap;
 }
 .sidebar-result__services__item__description {
 	font-size: 12px;
@@ -986,6 +983,25 @@ p em {
 @media screen and (max-width: 359px) {
 	.sidebar-result {
 		padding: 15px 5px;
+	}
+}
+
+@media screen and (max-width: 840px) {
+	.sidebar-result__services__item__amount--unlimited {
+		position: relative;
+		font-size: 0;
+		height: 23px;
+	}
+	.sidebar-result__services__item__amount--unlimited:before {
+		content: "8";
+		display: inline-block;
+		-webkit-transform: rotate(90deg);
+		-moz-transform: rotate(90deg);
+		-o-transform: rotate(90deg);
+		transform: rotate(90deg);
+		
+		font-size: 23px;
+		line-height: 1;
 	}
 }
 
