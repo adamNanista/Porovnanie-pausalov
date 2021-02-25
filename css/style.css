@@ -712,6 +712,31 @@ p em {
 .sidebar-result + .sidebar-result {
 	margin-top: 20px;
 }
+.sidebar-result--featured {
+	padding-top: 43px !important;
+	position: relative;
+}
+.sidebar-result__badges {
+	left: -2px;
+	position: absolute;
+	right: -2px;
+	top: -2px;
+	background-color: #ffffff;
+	border-bottom: 4px solid #df1b50;
+}
+.sidebar-result__badge {
+	display: inline-block;
+	padding: 4px 10px 0;
+	vertical-align: bottom;
+	
+	color: #ffffff;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 20px;
+	
+	background-color: #df1b50;
+	border-radius: 4px 4px 0 0;
+}
 
 .sidebar-result__inclusions {
 	position: relative;
@@ -904,27 +929,27 @@ p em {
 	padding: 10px 5px;
 }
 .sidebar-result__features__list {
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: 500;
-	line-height: 15px;
+	line-height: 17px;
 }
 .sidebar-result__features__list__item {
-	padding-left: 13px;
+	padding-left: 17px;
 	position: relative;
 }
 .sidebar-result__features__list__item:before {
 	content: " ";
 	display: block;
-	height: 8px;
+	height: 12px;
 	left: 0;
 	position: absolute;
-	top: 3px;
-	width: 8px;
+	top: 2px;
+	width: 12px;
 	
 	background: url(../images/list-checkmark.svg) no-repeat center;
 }
 .sidebar-result__features__list__item + .sidebar-result__features__list__item {
-	margin-top: 5px;
+	margin-top: 7px;
 }
 .sidebar-result__features__list__item strong {
 	font-weight: 700;
