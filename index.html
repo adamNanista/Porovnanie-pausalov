@@ -18,6 +18,7 @@
 	<script src="jquery-ui/jquery-ui.min.js"></script>
 	<script src="jquery-ui/jquery-ui-touch-punch.min.js"></script>
 	
+	
 	<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/fontawesome.css" />
 	<link rel="stylesheet" type="text/css" href="jquery-ui/jquery-ui.min.css" />
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
@@ -46,15 +47,14 @@
 						<div class="sidebar-form__group">
 							<label class="sidebar-form__label">
 								<span class="sidebar-form__label__text">Dáta (GB)</span>
-								<span class="sidebar-form__label__input__container">
-									<input type="text" placeholder="10" class="sidebar-form__label__input" />
-									<span class="sidebar-form__label__input__unit">GB/mes</span>
+								<span class="sidebar-form__label__switch__container">
+									<input type="checkbox" class="sidebar-form__label__checkbox" />
+									<span class="sidebar-form__label__switch">Neobmedzené</span>
+									<span class="sidebar-form__label__checkmark"></span>
 								</span>
 							</label>
 							<div class="sidebar-form__filter sidebar-form__filter--slider">
-								<span class="sidebar-form__filter__text">0 GB</span>
 								<div class="sidebar-form__filter__slider" id="data-filter"></div>
-								<span class="sidebar-form__filter__text">Neobm.</span>
 							</div>
 							<div class="sidebar-form__notsure">
 								<a href="#" class="sidebar-form__calculator__trigger">Nie ste si istý? <span class="sidebar-form__calculator__trigger__icon"><i class="fas fa-angle-down"></i></span></a>
@@ -129,29 +129,27 @@
 						<div class="sidebar-form__group">
 							<label class="sidebar-form__label">
 								<span class="sidebar-form__label__text">Hovory</span>
-								<span class="sidebar-form__label__input__container">
-									<input type="text" placeholder="100" class="sidebar-form__label__input" />
-									<span class="sidebar-form__label__input__unit">min/mes</span>
+								<span class="sidebar-form__label__switch__container">
+									<input type="checkbox" class="sidebar-form__label__checkbox" />
+									<span class="sidebar-form__label__switch">Neobmedzené</span>
+									<span class="sidebar-form__label__checkmark"></span>
 								</span>
 							</label>
 							<div class="sidebar-form__filter sidebar-form__filter--slider">
-								<span class="sidebar-form__filter__text">0 min</span>
 								<div class="sidebar-form__filter__slider" id="cell-filter"></div>
-								<span class="sidebar-form__filter__text">Neobm.</span>
 							</div>
 						</div>
 						<div class="sidebar-form__group">
 							<label class="sidebar-form__label">
 								<span class="sidebar-form__label__text">SMS</span>
-								<span class="sidebar-form__label__input__container">
-									<input type="text" placeholder="100" class="sidebar-form__label__input" />
-									<span class="sidebar-form__label__input__unit">SMS/mes</span>
+								<span class="sidebar-form__label__switch__container">
+									<input type="checkbox" class="sidebar-form__label__checkbox" />
+									<span class="sidebar-form__label__switch">Neobmedzené</span>
+									<span class="sidebar-form__label__checkmark"></span>
 								</span>
 							</label>
 							<div class="sidebar-form__filter sidebar-form__filter--slider">
-								<span class="sidebar-form__filter__text">0 SMS</span>
 								<div class="sidebar-form__filter__slider" id="sms-filter"></div>
-								<span class="sidebar-form__filter__text">Neobm.</span>
 							</div>
 						</div>
 						<div class="sidebar-form__group">
