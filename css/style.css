@@ -486,7 +486,9 @@ p em {
 	white-space: nowrap;
 	
 	background: #e2c52f;
+	border: 1px solid #fcdc31;
 	border-radius: 4px;
+	box-shadow: 0 0 8px #fcdc31;
 }
 .sidebar-form__filter__slider .ui-slider-tooltip:before {
 	content: " ";
