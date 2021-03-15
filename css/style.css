@@ -614,7 +614,7 @@ p em {
 	font-size: 12px;
 	line-height: 16px;
 	
-	background: #c9af2d;
+	background: #e2c52f;
 	border-radius: 50%;
 }
 .sidebar-form__calculator__trigger__icon i {
@@ -1306,9 +1306,6 @@ p em {
 		margin: 2%;
 		max-width: 46%;
 		min-width: 46%;
-	}
-	.sidebar-result__packets__item + .sidebar-result__packets__item {
-		margin-top: 5px;
 	}
 	
 	.sidebar-result__price {
