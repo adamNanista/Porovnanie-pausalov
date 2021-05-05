@@ -393,7 +393,7 @@ p em {
 .sidebar-form__filter__value {
 	padding: 0 5px;
 	
-	background-color: #c9af2d;
+	background-color: #e2c52f;
 	border-radius: 4px;
 }
 
@@ -445,7 +445,7 @@ p em {
 .sidebar-form__filter__slider.ui-slider {
 	height: 5px;
 	
-	background: #c9af2d;
+	background: #e2c52f;
 	border: 0;
 }
 .sidebar-form__filter__slider .ui-slider-range {
@@ -466,7 +466,7 @@ p em {
 	background: #ffffff url(../images/slider--handle.svg) no-repeat center;
 	border: 0;
 	border-radius: 4px;
-	box-shadow: 0 2px 0 #c9af2d;
+	box-shadow: 0 2px 0 #e2c52f;
 	
 	-webkit-transition: left 0.1s;
 	-moz-transition: left 0.1s;
@@ -495,7 +495,7 @@ p em {
 	background: #ffffff;
 	border: 0;
 	border-radius: 4px;
-	box-shadow: 0 -2px 0 #c9af2d;
+	box-shadow: 0 -2px 0 #e2c52f;
 }
 
 /* Not Sure */
@@ -550,7 +550,7 @@ p em {
 	
 	background: #ffffff;
 	border-radius: 4px;
-	box-shadow: 0 2px 0 #c9af2d;
+	box-shadow: 0 2px 0 #e2c52f;
 }
 .sidebar-form__calculator:before {
 	content: " ";
