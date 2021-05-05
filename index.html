@@ -47,14 +47,12 @@
 						<div class="sidebar-form__group">
 							<label class="sidebar-form__label">
 								<span class="sidebar-form__label__text">Dáta (GB)</span>
-								<span class="sidebar-form__label__switch__container">
-									<input type="checkbox" class="sidebar-form__label__checkbox" />
-									<span class="sidebar-form__label__switch">Neobmedzené</span>
-									<span class="sidebar-form__label__checkmark"></span>
-								</span>
+								<span class="sidebar-form__filter__value">0 GB</span>
 							</label>
 							<div class="sidebar-form__filter sidebar-form__filter--slider">
+								<span class="sidebar-form__filter__text">0</span>
 								<div class="sidebar-form__filter__slider" id="data-filter"></div>
+								<span class="sidebar-form__filter__text">Neobm.</span>
 							</div>
 							<div class="sidebar-form__notsure">
 								<a href="#" class="sidebar-form__calculator__trigger">Nie ste si istý? <span class="sidebar-form__calculator__trigger__icon"><i class="fas fa-angle-down"></i></span></a>
@@ -129,55 +127,54 @@
 						<div class="sidebar-form__group">
 							<label class="sidebar-form__label">
 								<span class="sidebar-form__label__text">Hovory</span>
-								<span class="sidebar-form__label__switch__container">
-									<input type="checkbox" class="sidebar-form__label__checkbox" />
-									<span class="sidebar-form__label__switch">Neobmedzené</span>
-									<span class="sidebar-form__label__checkmark"></span>
-								</span>
+								<span class="sidebar-form__filter__value">0 min</span>
 							</label>
 							<div class="sidebar-form__filter sidebar-form__filter--slider">
+								<span class="sidebar-form__filter__text">0</span>
 								<div class="sidebar-form__filter__slider" id="cell-filter"></div>
-							</div>
-						</div>
-						<div class="sidebar-form__group">
-							<label class="sidebar-form__label">
-								<span class="sidebar-form__label__text">SMS</span>
-								<span class="sidebar-form__label__switch__container">
-									<input type="checkbox" class="sidebar-form__label__checkbox" />
-									<span class="sidebar-form__label__switch">Neobmedzené</span>
-									<span class="sidebar-form__label__checkmark"></span>
-								</span>
-							</label>
-							<div class="sidebar-form__filter sidebar-form__filter--slider">
-								<div class="sidebar-form__filter__slider" id="sms-filter"></div>
+								<span class="sidebar-form__filter__text">Neobm.</span>
 							</div>
 						</div>
 						<div class="sidebar-form__group">
 							<label class="sidebar-form__label">
 								<span class="sidebar-form__label__text">Cena paušálu</span>
+								<span class="sidebar-form__filter__value">0 €</span>
 							</label>
-							<div class="sidebar-form__filter">
-								<label class="sidebar-form__filter__choice">
-									<input type="radio" name="price" class="sidebar-form__filter__choice__radio" checked="checked" />
-									<span class="sidebar-form__filter__choice__text">0-20 €<em>mesačne</em></span>
-									<span class="sidebar-form__filter__choice__checkmark"></span>
-								</label>
-								<label class="sidebar-form__filter__choice">
-									<input type="radio" name="price" class="sidebar-form__filter__choice__radio" />
-									<span class="sidebar-form__filter__choice__text">21-40 €<em>mesačne</em></span>
-									<span class="sidebar-form__filter__choice__checkmark"></span>
-								</label>
-								<label class="sidebar-form__filter__choice">
-									<input type="radio" name="price" class="sidebar-form__filter__choice__radio" />
-									<span class="sidebar-form__filter__choice__text">41-60 €<em>mesačne</em></span>
-									<span class="sidebar-form__filter__choice__checkmark"></span>
-								</label>
-								<label class="sidebar-form__filter__choice">
-									<input type="radio" name="price" class="sidebar-form__filter__choice__radio" />
-									<span class="sidebar-form__filter__choice__text">61+ €<em>mesačne</em></span>
-									<span class="sidebar-form__filter__choice__checkmark"></span>
-								</label>
+							<div class="sidebar-form__filter sidebar-form__filter--slider">
+								<span class="sidebar-form__filter__text">0</span>
+								<div class="sidebar-form__filter__slider" id="price-filter"></div>
+								<span class="sidebar-form__filter__text">Neobm.</span>
 							</div>
+						</div>
+						<div class="sidebar-form__group sidebar-form__group--two-col">
+							<div class="sidebar-form__group__column">
+								<label class="sidebar-form__label">
+									<span class="sidebar-form__label__text">E-mail</span>
+								</label>
+								<div class="sidebar-form__filter">
+									<input type="email" class="sidebar-form__filter__input" />
+								</div>
+							</div>
+							<div class="sidebar-form__group__column">
+								<label class="sidebar-form__label">
+									<span class="sidebar-form__label__text">Telefón</span>
+								</label>
+								<div class="sidebar-form__filter">
+									<input type="text" class="sidebar-form__filter__input" />
+								</div>
+							</div>
+						</div>
+						<div class="sidebar-form__group sidebar-form__group--consent">
+							<label class="sidebar-form__consent">
+								<input type="checkbox" class="sidebar-form__consent__checkbox" />
+								<span class="sidebar-form__consent__text">Súhlasím so <a href="#">spracúvaním osobných údajov</a> uvedených vo formulári.</span>
+								<span class="sidebar-form__consent__checkmark"></span>
+							</label>
+							<label class="sidebar-form__consent">
+								<input type="checkbox" class="sidebar-form__consent__checkbox" />
+								<span class="sidebar-form__consent__text">Súhlasím s <a href="#">marketingovým oslovením</a> spoločnosťou TotalMoney s.r.o.</span>
+								<span class="sidebar-form__consent__checkmark"></span>
+							</label>
 						</div>
 						<div class="sidebar-form__group">
 							<button class="sidebar-form__group__submit transition">Zobraziť porovnanie<i class="fas fa-angle-right"></i></button>

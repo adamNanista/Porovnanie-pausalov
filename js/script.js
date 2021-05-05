@@ -1,142 +1,38 @@
 $( function() {
 	
-	
 	$( '#data-filter' ).slider({ // Slider pre data
-		range: true,
+		range: "min", 
 		min: 0,
 		max: 20,
-		values: [0, 20],
 		slide: function( event, ui ) {
-			$(ui.handle).find('.ui-slider-tooltip-input').val( ui.value );
-		},
-		create: function( event, ui ) {
-			var tooltipMin = $('<div class="ui-slider-tooltip"><input type="text" class="ui-slider-tooltip-input" id="data-min" /><span class="ui-slider-tooltip-unit">GB</span></div>');
-			var tooltipMax = $('<div class="ui-slider-tooltip"><input type="text" class="ui-slider-tooltip-input" id="data-max" /><span class="ui-slider-tooltip-unit">GB</span></div>');
-			
-			$(event.target).find('.ui-slider-handle:nth-of-type(1)').append(tooltipMin);
-			$(event.target).find('.ui-slider-handle:nth-of-type(2)').append(tooltipMax);
+			var $filter = $(ui.handle).closest('.sidebar-form__filter');
+			var $label = $filter.prev('.sidebar-form__label');
+			var $filterValue = $label.find('.sidebar-form__filter__value');
+			$filterValue.text( ui.value + ' GB' );
 		}
 	});
-	
-	$("#data-min").val($("#data-filter").slider("values", 0));
-	$("#data-max").val($("#data-filter").slider("values", 1));
-	
-	$("#data-min").on('input', function () {		
-		var thisVal = parseInt($(this).val());
-		var maxVal = parseInt($("#data-max").val());
-		if (thisVal <= maxVal) {
-			$("#data-filter").slider('values', 0, $(this).val());
-		} else if (thisVal = 'NaN') {
-			$("#data-filter").slider('values', 0, 0);
-		} else {
-			$("#data-filter").slider('values', 0, maxVal);
-		}
-	});
-	
-	$("#data-max").on('input', function () {
-		var thisVal = parseInt($(this).val());
-		var minVal = parseInt($("#data-min").val());
-		var sliderLimit = parseInt($("#data-filter").slider('option', 'max'));
-		if (thisVal >= minVal) {
-			$("#data-filter").slider('values', 1, $(this).val());
-		} else if (thisVal = 'NaN') {
-			$("#data-filter").slider('values', 1, sliderLimit);
-		} else {
-			$("#data-filter").slider('values', 1, minVal);
-		}
-	});
-	
-	
 	
 	$( '#cell-filter' ).slider({ // Slider pre hovory
-		range: true,
+		range: "min", 
 		min: 0,
 		max: 300,
-		values: [0, 300],
 		slide: function( event, ui ) {
-			$(ui.handle).find('.ui-slider-tooltip-input').val( ui.value );
-		},
-		create: function( event, ui ) {
-			var tooltipMin = $('<div class="ui-slider-tooltip"><input type="text" class="ui-slider-tooltip-input" id="cell-min" /><span class="ui-slider-tooltip-unit">min</span></div>');
-			var tooltipMax = $('<div class="ui-slider-tooltip"><input type="text" class="ui-slider-tooltip-input" id="cell-max" /><span class="ui-slider-tooltip-unit">min</span></div>');
-			
-			$(event.target).find('.ui-slider-handle:nth-of-type(1)').append(tooltipMin);
-			$(event.target).find('.ui-slider-handle:nth-of-type(2)').append(tooltipMax);
+			var $filter = $(ui.handle).closest('.sidebar-form__filter');
+			var $label = $filter.prev('.sidebar-form__label');
+			var $filterValue = $label.find('.sidebar-form__filter__value');
+			$filterValue.text( ui.value + ' min' );
 		}
 	});
 	
-	$("#cell-min").val($("#cell-filter").slider("values", 0));
-	$("#cell-max").val($("#cell-filter").slider("values", 1));
-	
-	$("#cell-min").on('input', function () {		
-		var thisVal = parseInt($(this).val());
-		var maxVal = parseInt($("#cell-max").val());
-		if (thisVal <= maxVal) {
-			$("#cell-filter").slider('values', 0, $(this).val());
-		} else if (thisVal = 'NaN') {
-			$("#cell-filter").slider('values', 0, 0);
-		} else {
-			$("#cell-filter").slider('values', 0, maxVal);
-		}
-	});
-	
-	$("#cell-max").on('input', function () {
-		var thisVal = parseInt($(this).val());
-		var minVal = parseInt($("#cell-min").val());
-		var sliderLimit = parseInt($("#cell-filter").slider('option', 'max'));
-		if (thisVal >= minVal) {
-			$("#cell-filter").slider('values', 1, $(this).val());
-		} else if (thisVal = 'NaN') {
-			$("#cell-filter").slider('values', 1, sliderLimit);
-		} else {
-			$("#cell-filter").slider('values', 1, minVal);
-		}
-	});
-	
-	
-	
-	$( '#sms-filter' ).slider({ // Slider pre SMS
-		range: true,
+	$( '#price-filter' ).slider({ // Slider pre hovory
+		range: "min", 
 		min: 0,
-		max: 200,
-		values: [0, 200],
+		max: 60,
 		slide: function( event, ui ) {
-			$(ui.handle).find('.ui-slider-tooltip-input').val( ui.value );
-		},
-		create: function( event, ui ) {
-			var tooltipMin = $('<div class="ui-slider-tooltip"><input type="text" class="ui-slider-tooltip-input" id="sms-min" /><span class="ui-slider-tooltip-unit">SMS</span></div>');
-			var tooltipMax = $('<div class="ui-slider-tooltip"><input type="text" class="ui-slider-tooltip-input" id="sms-max" /><span class="ui-slider-tooltip-unit">SMS</span></div>');
-			
-			$(event.target).find('.ui-slider-handle:nth-of-type(1)').append(tooltipMin);
-			$(event.target).find('.ui-slider-handle:nth-of-type(2)').append(tooltipMax);
-		}
-	});
-	
-	$("#sms-min").val($("#sms-filter").slider("values", 0));
-	$("#sms-max").val($("#sms-filter").slider("values", 1));
-	
-	$("#sms-min").on('input', function () {		
-		var thisVal = parseInt($(this).val());
-		var maxVal = parseInt($("#sms-max").val());
-		if (thisVal <= maxVal) {
-			$("#sms-filter").slider('values', 0, $(this).val());
-		} else if (thisVal = 'NaN') {
-			$("#sms-filter").slider('values', 0, 0);
-		} else {
-			$("#sms-filter").slider('values', 0, maxVal);
-		}
-	});
-	
-	$("#sms-max").on('input', function () {
-		var thisVal = parseInt($(this).val());
-		var minVal = parseInt($("#sms-min").val());
-		var sliderLimit = parseInt($("#sms-filter").slider('option', 'max'));
-		if (thisVal >= minVal) {
-			$("#sms-filter").slider('values', 1, $(this).val());
-		} else if (thisVal = 'NaN') {
-			$("#sms-filter").slider('values', 1, sliderLimit);
-		} else {
-			$("#sms-filter").slider('values', 1, minVal);
+			var $filter = $(ui.handle).closest('.sidebar-form__filter');
+			var $label = $filter.prev('.sidebar-form__label');
+			var $filterValue = $label.find('.sidebar-form__filter__value');
+			$filterValue.text( ui.value + ' €' );
 		}
 	});
 	
